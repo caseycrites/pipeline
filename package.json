@@ -1,12 +1,12 @@
 {
-  "name": "filters",
-  "description": "SimpleGeo Spatial Events Processor Filters",
+  "name": "filter",
+  "description": "SimpleGeo Spatial Events Processor filter",
   "version": "0.1.0",
   "repository": {},
   "author": "SimpleGeo <nerds@simplegeo.com>",
-  "main": "./lib/filters",
+  "main": "./lib/filter",
   "directories": {
-    "lib": "./lib/filters"
+    "lib": "./lib/filter"
   },
   "scripts": {
     "test": "expresso"
@@ -19,7 +19,7 @@
     "request": "== 1.9.5",
     "sgutil": ">= 0.1.32",
     "simplegeo-client": ">=0.1.0",
-    "jsonselect": ">=0.0.1",
+    "JSONSelect": ">=0.0.1",
     "underscore": ">=1.1.4",
     "step": ">=0.0.3"
   }
