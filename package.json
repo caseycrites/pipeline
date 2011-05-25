@@ -20,6 +20,7 @@
     "sgutil": ">= 0.1.32",
     "simplegeo-client": ">=0.1.0",
     "JSONSelect": ">=0.0.1",
+    "jsonquery": ">=0.1.0",
     "underscore": ">=1.1.4",
     "step": ">=0.0.3"
   }
