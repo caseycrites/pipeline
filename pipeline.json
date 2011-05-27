@@ -1,0 +1,82 @@
+[
+    {
+        'type': 'context'
+    },
+    {
+        'type': 'transform',
+        'data_structure': 'something'
+    },
+    {
+        'type': 'union',
+        'filter': [
+            {
+                'type': 'split',
+                'filter_1': [
+                    {
+                        'type': 'storageNearby',
+                        'layer': 'com.testing.layer',
+                        'radius': '.25'
+                    }
+                ],
+                'filter_2': [
+                    {
+                        'type': 'identity'
+                    }
+                ]
+            }
+        ],
+        'left_name': 'records',
+        'right_name': 'weather'
+    },
+    {
+        'type': 'map',
+        'filter': [
+            {
+                'type': 'split',
+                'filter_1': [
+                    {
+                        'type': 'transform',
+                        'data_structure': ''
+                    },
+                    {
+                        'type': 'partial',
+                        'filter': [
+                            {
+                                'type': 'union',
+                                'filter_1': [
+                                    {
+                                        'type': 'transform',
+                                        'data_structure': ''
+                                    }
+                                ],
+                                'filter_2': [
+                                    {
+                                        'type': 'identity'
+                                    }
+                                ],
+                                'left_name': 'weather',
+                                'right_name': 'user'
+                            }
+                        ]
+                    }
+                ],
+                'filter_2': [
+                    {
+                        'type': 'transform',
+                        'data_structure': ''
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        'type': 'loop',
+        'filter': [
+            {
+                'type': 'notify',
+                'url': 'http://starbucks.com/campaigns/frappucino.json',
+                'http_method': 'POST'
+            }
+        ]
+    }
+]
