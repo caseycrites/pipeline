@@ -4,7 +4,11 @@
     },
     {
         'type': 'transform',
-        'data_structure': 'something'
+        'data_structure': {
+            'lat': '$.lat',
+            'lon': '$.lon',
+            'temperature': '$.weather.temperature'
+        }
     },
     {
         'type': 'union',
@@ -35,10 +39,6 @@
                 'type': 'split',
                 'filter_1': [
                     {
-                        'type': 'transform',
-                        'data_structure': ''
-                    },
-                    {
                         'type': 'partial',
                         'filter': [
                             {
@@ -46,7 +46,9 @@
                                 'filter_1': [
                                     {
                                         'type': 'transform',
-                                        'data_structure': ''
+                                        'data_structure': {
+                                            'temperature': '$.weather.temperature'
+                                        }
                                     }
                                 ],
                                 'filter_2': [
@@ -63,7 +65,9 @@
                 'filter_2': [
                     {
                         'type': 'transform',
-                        'data_structure': ''
+                        'data_structure': {
+                            'users': '$.records'
+                        }
                     }
                 ]
             }
