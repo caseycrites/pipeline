@@ -1,12 +1,12 @@
 {
-  "name": "filter",
-  "description": "SimpleGeo Spatial Events Processor filter",
+  "name": "pipeline",
+  "description": "SimpleGeo Spatial Events Processor Pipeline",
   "version": "0.1.0",
   "repository": {},
   "author": "SimpleGeo <nerds@simplegeo.com>",
-  "main": "./lib/filter",
+  "main": "./lib/pipeline",
   "directories": {
-    "lib": "./lib/filter"
+    "lib": "./lib/pipeline"
   },
   "scripts": {
     "test": "expresso"

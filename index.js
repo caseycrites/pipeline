@@ -1,1 +1,1 @@
-module.exports = require('./lib/filter')
+module.exports = require('./lib/pipeline')
