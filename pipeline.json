@@ -1,86 +1,92 @@
-[
-    {
-        'type': 'context'
+{
+    'event': {
+        'lat': '37.772643',
+        'lon': '-122.406095'
     },
-    {
-        'type': 'transform',
-        'data_structure': {
-            'lat': '$.lat',
-            'lon': '$.lon',
-            'temperature': '$.weather.temperature'
-        }
-    },
-    {
-        'type': 'union',
-        'filter': [
-            {
-                'type': 'split',
-                'filter_1': [
-                    {
-                        'type': 'storageNearby',
-                        'layer': 'com.testing.layer',
-                        'radius': '.25'
-                    }
-                ],
-                'filter_2': [
-                    {
-                        'type': 'identity'
-                    }
-                ]
+    'options': [
+        {
+            'type': 'context'
+        },
+        {
+            'type': 'transform',
+            'data_structure': {
+                'lat': '$.lat',
+                'lon': '$.lon',
+                'temperature': '$.weather.temperature'
             }
-        ],
-        'left_name': 'records',
-        'right_name': 'weather'
-    },
-    {
-        'type': 'map',
-        'filter': [
-            {
-                'type': 'split',
-                'filter_1': [
-                    {
-                        'type': 'partial',
-                        'filter': [
-                            {
-                                'type': 'union',
-                                'filter_1': [
-                                    {
-                                        'type': 'transform',
-                                        'data_structure': {
-                                            'temperature': '$.weather.temperature'
-                                        }
-                                    }
-                                ],
-                                'filter_2': [
-                                    {
-                                        'type': 'identity'
-                                    }
-                                ],
-                                'left_name': 'weather',
-                                'right_name': 'user'
-                            }
-                        ]
-                    }
-                ],
-                'filter_2': [
-                    {
-                        'type': 'transform',
-                        'data_structure': {
-                            'users': '$.records'
+        },
+        {
+            'type': 'union',
+            'filter': [
+                {
+                    'type': 'split',
+                    'filter_1': [
+                        {
+                            'type': 'storageNearby',
+                            'layer': 'com.testing.layer',
+                            'radius': '.25'
                         }
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        'type': 'loop',
-        'filter': [
-            {
-                'type': 'notify',
-                'url': 'http://starbucks.com/campaigns/frappucino.json',
-                'http_method': 'POST'
-            }
-        ]
-    }
-]
+                    ],
+                    'filter_2': [
+                        {
+                            'type': 'identity'
+                        }
+                    ]
+                }
+            ],
+            'left_name': 'records',
+            'right_name': 'weather'
+        },
+        {
+            'type': 'map',
+            'filter': [
+                {
+                    'type': 'split',
+                    'filter_1': [
+                        {
+                            'type': 'partial',
+                            'filter': [
+                                {
+                                    'type': 'union',
+                                    'filter_1': [
+                                        {
+                                            'type': 'transform',
+                                            'data_structure': {
+                                                'temperature': '$.weather.temperature'
+                                            }
+                                        }
+                                    ],
+                                    'filter_2': [
+                                        {
+                                            'type': 'identity'
+                                        }
+                                    ],
+                                    'left_name': 'weather',
+                                    'right_name': 'user'
+                                }
+                            ]
+                        }
+                    ],
+                    'filter_2': [
+                        {
+                            'type': 'transform',
+                            'data_structure': {
+                                'users': '$.records'
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            'type': 'loop',
+            'filter': [
+                {
+                    'type': 'notify',
+                    'url': 'http://starbucks.com/campaigns/frappucino.json',
+                    'http_method': 'POST'
+                }
+            ]
+        }
+    ]
+}
