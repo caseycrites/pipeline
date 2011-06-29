@@ -1,0 +1,20 @@
+# -*- mode: shell-script -*-
+# Defaults for nodejs-gate initscript
+# sourced by /etc/init.d/nodejs-gate
+# installed at /etc/default/nodejs-gate by the maintainer scripts
+
+#
+# This is a POSIX shell fragment
+#
+
+# Additional options that are passed to the Daemon.
+DAEMON_OPTS=""
+
+# Port number
+PORT="8000"
+
+# Number of worker processes
+WORKERS=1
+
+# Change this to `yes' to run this daemon
+RUN=no

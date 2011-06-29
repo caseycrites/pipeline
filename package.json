@@ -19,11 +19,10 @@
     "decimaljson": ">= 0.2.0",
     "request": "== 1.9.5",
     "sgutil": ">= 0.1.0",
-    "simplegeo-client": ">=0.1.0",
-    "JSONSelect": ">=0.0.1",
-    "jsonquery": ">=0.1.0",
-    "underscore": ">=1.1.4",
-    "step": ">=0.0.3"
+    "simplegeo-client": ">= 0.1.0",
+    "JSONSelect": ">= 0.2.1",
+    "underscore": ">= 1.1.4",
+    "step": ">= 0.0.3"
   }
 }
 
