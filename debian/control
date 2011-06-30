@@ -21,6 +21,7 @@ Depends: nodejs (>= 0.2.6),
  nodejs-underscore (>= 1.1.3),
  nodejs-step (>= 0.0.4),
  nodejs-decimaljson (>=0.2.1),
+ nodejs-sgutil (>= 0.1.60),
  nodejs-simplegeo (>= 0.1.0-0sg2),
  nodejs-jsonselect (>= 0.2.1-0sg6),
  ${misc:Depends}
