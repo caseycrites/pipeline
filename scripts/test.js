@@ -1,3 +1,6 @@
+#!/usr/bin/env node
+// vim: filetype=javascript
+
 var settings = require('pipeline/settings').autoload()
   , penelope = require('sgutil').penelope(settings)
 
