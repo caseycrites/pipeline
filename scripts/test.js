@@ -1,5 +1,5 @@
 var settings = require('pipeline/settings').autoload()
-  , penelope = require('sgutil/penelope')(settings)
+  , penelope = require('sgutil'.penelope(settings)
 
 var pipeline = new Pipeline({
   name: 'test.pipeline',
