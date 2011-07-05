@@ -13,6 +13,7 @@ Build-Depends: cdbs,
  nodejs-sgutil (>= 0.1.60),
  nodejs-simplegeo (>= 0.1.0-0sg2),
  nodejs-jsonselect (>= 0.2.1-0sg6),
+ nodejs-storage (>= 0.1.0),
 Standards-Version: 3.9.1
 
 Package: nodejs-pipeline
@@ -24,6 +25,7 @@ Depends: nodejs (>= 0.2.6),
  nodejs-sgutil (>= 0.1.60),
  nodejs-simplegeo (>= 0.1.0-0sg2),
  nodejs-jsonselect (>= 0.2.1-0sg6),
+ nodejs-storage (>= 0.1.0),
  ${misc:Depends}
 Architecture: all
 Description: The SimpleGeo spatial events processor

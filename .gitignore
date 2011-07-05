@@ -1,6 +1,7 @@
 *.swp
 *.swo
 *.swn
+*.swm
 notes
 node_modules/
 pipeline.cfg
