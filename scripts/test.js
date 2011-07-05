@@ -1,6 +1,4 @@
 var settings = require('pipeline/settings').autoload()
-  , pipelines = require('pipelines')(settings)
-  , User = require('storage/User')
   , penelope = require('sgutil/penelope')(settings)
 
 var pipeline = new Pipeline({
