@@ -1,9 +1,9 @@
 {
   "name": "pipeline",
-  "description": "SimpleGeo Spatial Events Processor Pipeline",
+  "description": "Events Processor Pipeline",
   "version": "0.1.0",
   "repository": {},
-  "author": "SimpleGeo <nerds@simplegeo.com>",
+  "author": "Casey W Crites <crites.casey@gmail.com>",
   "main": "./lib/pipeline",
   "directories": {
     "lib": "./lib/pipeline"
@@ -12,18 +12,15 @@
     "test": "expresso"
   },
   "engines": {
-    "node": ">= 0.4.7"
+    "node": ">=0.4.7"
   },
   "dependencies": {
-    "connect": ">= 1.4.0",
-    "decimaljson": ">= 0.2.0",
-    "request": "== 1.9.5",
-    "sgutil": ">= 0.1.0",
-    "simplegeo-client": ">=0.1.0",
-    "JSONSelect": ">=0.0.1",
-    "jsonquery": ">=0.1.0",
-    "underscore": ">=1.1.4",
-    "step": ">=0.0.3"
+    "connect": ">=2.7.2",
+    "decimaljson": ">=0.2.2",
+    "request": ">=2.12.0",
+    "JSONSelect": ">=0.4.0",
+    "underscore": ">=1.4.4",
+    "async": ">=0.1.22"
   }
 }
 
